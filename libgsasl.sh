@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/sh
 
 # Copyright 2014-present Viktor Szakats <https://vsz.me/>
 # See LICENSE.md
@@ -73,6 +73,8 @@ _cpu="$2"
     --disable-valgrind-tests \
     '--prefix=/usr/local' \
     --silent
+  cat config.log
+
   make --jobs 2 clean >/dev/null
   make --jobs 2 install "DESTDIR=$(pwd)/pkg" # >/dev/null # V=1
 

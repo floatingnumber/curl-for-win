@@ -191,10 +191,10 @@ build_single_target() {
 
   command -v "$(dirname "$0")/osslsigncode-local" >/dev/null 2>&1 || unset SIGN_CODE_KEY
 
+  time ./libgsasl.sh "${LIBGSASL_VER_}" "${_cpu}"
   time ./zlib.sh         "${ZLIB_VER_}" "${_cpu}"
   time ./zstd.sh         "${ZSTD_VER_}" "${_cpu}"
   time ./brotli.sh     "${BROTLI_VER_}" "${_cpu}"
-  time ./libgsasl.sh "${LIBGSASL_VER_}" "${_cpu}"
   time ./libidn2.sh   "${LIBIDN2_VER_}" "${_cpu}"
   time ./c-ares.sh      "${CARES_VER_}" "${_cpu}"
   time ./nghttp2.sh   "${NGHTTP2_VER_}" "${_cpu}"
