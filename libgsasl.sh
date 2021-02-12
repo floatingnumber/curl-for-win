@@ -75,7 +75,7 @@ _cpu="$2"
     --disable-valgrind-tests \
     '--prefix=/usr/local'
   echo '----------------------------------------'
-  cat config.log
+# cat config.log
   echo '----------------------------------------'
 
   make --jobs 2 clean >/dev/null
